@@ -3,18 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
+
   --font-outfit: "Outfit", sans-serif;
   --font-ovo: "Ovo", serif;
-  /* --lightHover: '#fcf4ff',
-  --darkHover:'#2a004a',
-  --darkTheme: var(--foreground) */
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-outfit: var(--font-outfit);
-  --font-ovo: var(--font-ovo);
+  --lightHover: #fcf4ff;
+  --darkHover: #2a004a;
+  --darkTheme: #11001f; /* or use var(--foreground) if you want it dynamic */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,5 +22,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Outfit", "Ovo", sans-serif;
+  font-family: var(--font-outfit), var(--font-ovo), sans-serif;
 }

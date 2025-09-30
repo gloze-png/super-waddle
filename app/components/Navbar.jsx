@@ -1,9 +1,11 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import React from "react";
 
 const Navbar = () => {
+
+  const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef(null);
 
   const openMenu = () => {
@@ -13,6 +15,17 @@ const Navbar = () => {
   const closeMenu = () => {
     sideMenuRef.current.style.right = "-16rem"; // slide out
   };
+  useEffect(() =>{
+    window.addEventListener('scroll', ()=>{
+      if(scrollY >50){
+        setIsScroll(true);
+
+      } else{
+        setIsScroll(false);
+
+      }
+    });
+  },[])
 
   return (
     <>
@@ -22,7 +35,7 @@ const Navbar = () => {
       </div>
 
       {/* Navbar */}
-      <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+      <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm":""}`}>
         {/* Logo */}
         <a href="#top">
           <h1 className="text-5xl font-bold text-black tracking-wide cursor-pointer">
@@ -31,7 +44,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-5 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+        <ul className={`hidden md:flex items-center gap-5 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : " bg-white shadow-sm bg-opacity-50"}`}>
           <li><a className="font-ovo" href="#home">Home</a></li>
           <li><a className="font-ovo" href="#about">About Me</a></li>
           <li><a className="font-ovo" href="#services">Services</a></li>
