@@ -100,10 +100,10 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.web_icon, title: 'Software Development', description: 'Software development is the process of designing, building, testing, and maintaining software applications to solve real-world problems or improve business processes...', link: '' },
+    { icon: assets.mobile_icon, title: 'Mobile App', description: 'Mobile development is the process of designing, building, and maintaining applications for mobile devices such as smartphones and tablets...', link: '' },
+    { icon: assets.ui_icon, title: 'Wordpress Developement', description: 'WordPress development involves designing, building, and maintaining websites using the WordPress content management system (CMS). It includes creating custom themes and templates for a unique look and feel, developing and integrating plugins to add new functionality, optimizing website performance, ensuring security, and managing content efficiently...', link: '' },
+    { icon: assets.graphics_icon, title: 'AI Development', description: 'AI development is the process of designing, building, and deploying intelligent systems that can mimic human behavior, learn from data, and make decisions autonomously. It involves creating machine learning models, natural language processing systems, computer vision solutions, and predictive analytics tools using technologies like Python, TensorFlow, PyTorch, and large language models (LLMs)...', link: '' },
 ]
 
 export const infoList = [
