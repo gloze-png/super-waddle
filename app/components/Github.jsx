@@ -24,14 +24,14 @@ const Github = ({ username = 'gloze-png', repoLimit = 3 }) => {
   }, [username, repoLimit]);
 
   return (
-    <div className="w-full px-[12%] py-10 scroll-mt-20">
+    <div id='work' className="w-full px-[12%] py-10 scroll-mt-20">
        <h2 className='text-center text-5xl font-[var(--font-ovo)] px-5'>Latest GitHub Projects</h2>
        <div className='text-center mb-10 mt-2 text-lg font-ovo'>Check out some of my recent work on GitHub.</div>
 
       {loading ? (
-        <p className="bg-zinc-900 rounded-lg p-10 flex justify-center items-center text-white">Loading...</p>
+        <p className="bg-gray-500 rounded-lg p-10 flex justify-center items-center text-white">Loading...</p>
       ) : repos.length === 0 ? (
-        <p className="text-red-500 text-center">No repositories found.</p>
+        <p className="text-black text-center">No repositories found.</p>
       ) : (
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
   {repos.map(repo => (
